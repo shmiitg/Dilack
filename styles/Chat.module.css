@@ -67,12 +67,6 @@
     padding: 20px;
 }
 
-.userimage {
-    object-fit: contain;
-    height: 50px;
-    width: 50px;
-}
-
 .message__info {
     padding-left: 10px;
 }

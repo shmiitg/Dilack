@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "../styles/Chat.module.css";
+import Image from "next/image";
 
 const Messages = ({ message, timestamp, user, userImage }) => {
     return (
         <div className={styles.message}>
-            <img className={styles.userimage} src={userImage} alt="" />
+            <Image src={userImage} height="50" width="50" objectFit="contain" />
             <div className={styles.message__info}>
                 <h4>
                     {user}
