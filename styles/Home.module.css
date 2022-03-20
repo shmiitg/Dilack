@@ -1,116 +1,140 @@
-.container {
-  padding: 0 2rem;
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: #fff;
+    background-color: var(--slack-color);
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.header__left {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.time__icon {
+    margin-left: auto;
+    margin-right: 30px;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.header__title {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    padding: 0 50px;
+    color: #fff;
+    justify-content: center;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.header__right {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.logout__btn {
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+/* Sidebar */
+.sidebar {
+    background-color: var(--slack-color);
+    border-top: 1px solid #49274b;
+    color: #fff;
+    flex: 0.25;
+    max-width: 260px;
+    padding-bottom: 50px;
 }
 
-.title,
-.description {
-  text-align: center;
+.sidebar__header {
+    display: flex;
+    border-bottom: 1px solid #49274b;
+    padding-bottom: 10px;
+    padding: 13px;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.sidebar__info {
+    flex: 1;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.sidebar__serverName {
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 5px;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+.sidebar__name {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 400;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.fiberManualRecord__icon {
+    font-size: 14px;
+    margin-top: 1px;
+    margin-right: 2px;
+    color: green;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.user__name {
+    margin-top: 2px;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
+/* Sidebar Option */
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
+.sidebarOptions {
+    display: flex;
     flex-direction: column;
-  }
+}
+
+.sidebarOption {
+    font-size: 12px;
+    padding-left: 2px;
+    cursor: pointer;
+}
+
+.sidebarOption:hover {
+    opacity: 0.9;
+    background-color: #340e36;
+}
+
+.sidebarOption__channel {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    padding: 4px 0;
+}
+
+.sidebarOption__title {
+    font-weight: 500;
+}
+
+.sidebarOption__icon {
+    font-size: 15px !important;
+}
+
+.sidebarOption__hash {
+    display: flex;
+    width: 35px;
+    justify-content: center;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.sidebarOption__hr {
+    border: 1px solid #49274b;
+}
+
+/* index page */
+.index__heading {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-top: 10rem;
 }
