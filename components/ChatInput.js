@@ -11,13 +11,13 @@ const ChatInput = ({ channelName, channelId }) => {
         e.preventDefault();
         if (channelId) {
             const messageRef = collection(db, "rooms", channelId, "messages");
+            setInput("");
             await addDoc(messageRef, {
                 message: input,
                 timestamp: Timestamp.fromDate(new Date()),
                 user: user?.displayName,
                 userimage: user?.photoURL,
             });
-            setInput("");
         }
     };
 

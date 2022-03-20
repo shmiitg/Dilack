@@ -1,7 +1,8 @@
 import { useRouter } from "next/router";
 import { createContext, useContext, useEffect, useState } from "react";
 import { onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
-import { auth, provider } from "../config/firebase";
+import { db, auth, provider } from "../config/firebase";
+import { addDoc, query, collection, where, onSnapshot } from "firebase/firestore";
 
 const AuthContext = createContext({});
 
@@ -11,6 +12,7 @@ export const AuthContextProvider = ({ children }) => {
     const router = useRouter();
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const usersRef = collection(db, "users");
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -28,8 +30,13 @@ export const AuthContextProvider = ({ children }) => {
         signInWithPopup(auth, provider)
             .then((res) => {
                 setUser(res.user);
-                console.log(res.user);
                 router.push("/");
+                const q = query(usersRef, where("id", "==", res.user.uid));
+                onSnapshot(q, (snapshot) => {
+                    if (!snapshot.docs.length) {
+                        addDoc(usersRef, { id: res.user.uid, type: "user" });
+                    }
+                });
             })
             .catch((err) => {
                 console.log(err.message);
