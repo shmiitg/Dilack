@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import styles from "../styles/Chat.module.css";
 import { db } from "../config/firebase";
 import { Timestamp, collection, addDoc } from "firebase/firestore";
