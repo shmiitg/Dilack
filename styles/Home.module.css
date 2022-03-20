@@ -23,7 +23,6 @@
     flex: 1;
     text-align: center;
     display: flex;
-    padding: 0 50px;
     color: #fff;
     justify-content: center;
 }
@@ -46,7 +45,7 @@
     background-color: var(--slack-color);
     border-top: 1px solid #49274b;
     color: #fff;
-    flex: 0.25;
+    flex: 0.5;
     max-width: 260px;
     padding-bottom: 50px;
 }
@@ -137,4 +136,9 @@
     flex: 1;
     justify-content: center;
     margin-top: 10rem;
+}
+
+.index__welcomeHeading {
+    text-align: center;
+    height: fit-content;
 }
