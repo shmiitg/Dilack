@@ -63,7 +63,7 @@ const Chat = ({ id }) => {
                     <ChatInput channelName={roomDetails?.name} channelId={id} />
                 </div>
             ) : (
-                <div>Room doesn't exists</div>
+                <div>Room does not exists</div>
             )}
         </React.Fragment>
     );

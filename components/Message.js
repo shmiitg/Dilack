@@ -5,7 +5,7 @@ import Image from "next/image";
 const Messages = ({ message, timestamp, user, userImage }) => {
     return (
         <div className={styles.message}>
-            <Image src={userImage} height="50" width="50" objectFit="contain" />
+            <Image src={userImage} height="50" width="50" objectFit="contain" alt="avatar" />
             <div className={styles.message__info}>
                 <h4>
                     {user}

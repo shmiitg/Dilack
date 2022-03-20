@@ -14,6 +14,7 @@ const Login = () => {
                         width="100"
                         height="100"
                         objectFit="contain"
+                        alt="logo"
                     />
                 </div>
                 <h1>Sign in to Dilack</h1>
